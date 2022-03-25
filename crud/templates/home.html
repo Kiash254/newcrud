@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+
+{% block  content %}
+
+<h1><a href="{% url 'crud:create' %} ">create</a></h1>
+{%for users in user %}
+{{users.accname}}
+{{users.age}}
+{{users.password}}
+<h1 a=href"{% url 'crud:detail' users.id %}" ><a href="">Detail</a></h1>
+{% endfor %}
+{% endblock %}users in user

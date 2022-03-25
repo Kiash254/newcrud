@@ -1,0 +1,21 @@
+{%  extends 'main.html' %}
+
+
+
+{% block content %}
+
+<h1>please welcome to class room please</h1>
+<a href="/">Home</a>
+<div>
+    <div>
+        <h2>{{users.accname}}</h2>
+        <a href="">{{users.age}}</a>
+       <br>
+       <p>{{ users.password }}</p>
+       <br>
+         <button><a href="{% url 'crud:update' users.id %}">Update</a></button>
+        <button type="submit"><a href="{% url 'crud:delete' users.id %}">Delete</a></button>
+    </div>
+</div>
+
+{% endblock %}

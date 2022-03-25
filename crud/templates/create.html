@@ -1,0 +1,14 @@
+{%extends 'main.html' %}
+{% load bootstrap4 %}
+
+{% load crispy_forms_tags %}
+{%  block content  %}
+<form method="POST" action="">
+     {% csrf_token %}
+     <h1>wewe</h1>
+     {{form.accname|as_crispy_field}}
+     {{form.age|as_crispy_field}}
+     <button href="" type="submit">SUBMIT</button>
+</form>
+
+{% endblock content %}
